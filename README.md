@@ -15,8 +15,8 @@ See the [PDF Instructions](/FreqGen.pdf) for construction details.
 
 ## Programs
 
-freqgen.json	-- Available rpiTX commands
-freqgen.py	-- Main Program
-testButtons.py	-- Test the GPIO momentary push buttons
-testOLED.py	-- Test the 128x64 SH1106 OLED i2c screen
+- freqgen.json	-- Available rpiTX commands
+- freqgen.py	-- Main Program
+- testButtons.py	-- Test the GPIO momentary push buttons
+- testOLED.py	-- Test the 128x64 SH1106 OLED i2c screen
 
