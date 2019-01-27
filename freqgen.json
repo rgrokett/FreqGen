@@ -1,0 +1,48 @@
+{
+    "RPITX_PATH": "/home/pi/rpitx",
+    "modulations": [
+        { 
+            "name": "Carrier",
+            "shell": "testvfo.sh",
+            "freq": "e6",
+            "command": "tune"
+        },
+        { 
+            "name": "Chirp",
+            "shell": "testchirp.sh",
+            "freq": "e6",
+            "command": "pichirp"
+        },
+        { 
+            "name": "AM",
+            "shell": "testam.sh",
+            "freq": "e3",
+            "command": "rpitx"
+        },
+        { 
+            "name": "Narrow FM",
+            "shell": "testnfm.sh",
+            "freq": "e3",
+            "command": "rpitx"
+        },
+        { 
+            "name": "SSB",
+            "shell": "testssb.sh",
+            "freq": "e6",
+            "command": "sendiq"
+        },
+        { 
+            "name": "SSTV",
+            "shell": "testsstv.sh",
+            "freq": "e6",
+            "command": "pisstv"
+        },
+        { 
+            "name": "POCSAG",
+            "shell": "testpocsag.sh",
+            "freq": "e6",
+            "command": "pocsag"
+        }
+    ]
+}
+
