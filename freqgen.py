@@ -202,22 +202,22 @@ def change_freq(freq):
                 press_cnt = 0
 
             BTN3.wait_for_release()
-        # DISPLAY FREQ DIGITS
-        if next_digit:
+          # DISPLAY FREQ DIGITS
+          if next_digit:
             l_freq.append(digits[press_cnt])
             next_digit = 0
-        elif press_cnt > 0: 
+          elif press_cnt > 0: 
             l_freq[digit] = digits[press_cnt]
 
-        s_freq = str(''.join(l_freq))
-        draw.rectangle(device.bounding_box, outline="white", fill="black")
-        draw.text((15,5), 'Enter Frequency:', fill="white")
-        draw.text((15,15), '(0.005 - 1500.0 mhz)', font=font2,fill="white")
-        draw.text((15,35), s_freq, font=font2,fill="white")
-        draw.text((15,45), stat_txt, font=font2,fill="white")
-        draw.text((10,35), sel_txt, font=font2,fill="white")
+          s_freq = str(''.join(l_freq))
+          draw.rectangle(device.bounding_box, outline="white", fill="black")
+          draw.text((15,5), 'Enter Frequency:', fill="white")
+          draw.text((15,15), '(0.005 - 1500.0 mhz)', font=font2,fill="white")
+          draw.text((15,35), s_freq, font=font2,fill="white")
+          draw.text((15,45), stat_txt, font=font2,fill="white")
+          draw.text((10,35), sel_txt, font=font2,fill="white")
 
-        time.sleep(0.1)
+          time.sleep(0.1)
 
     if DEBUG:
         print ("New Freq: "+str(freq)+" mhz")
@@ -327,15 +327,15 @@ def verify_exit():
         loaded = 1
         BTN3.wait_for_release()
 
-    # Update the display
-    y = 15 + (10 * selected)
-    with canvas(device) as draw:
+      # Update the display
+      y = 15 + (10 * selected)
+      with canvas(device) as draw:
         draw.rectangle(device.bounding_box, outline="white", fill="black")
         draw.text((15,5), 'Exit?', fill="white")
         draw.text((15,15), 'CANCEL', font=font2,fill="white")
         draw.text((15,25), 'EXIT', font=font2,fill="white")
         draw.text((10,y), sel_txt, font=font2, fill="white")
-    time.sleep(0.1)
+      time.sleep(0.1)
 
     return(selected)
 
